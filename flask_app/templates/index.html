@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/dist/output.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <div class="px-5">
+        <div class="flex items-center justify-center gap-3 p-2">
+            <div class="text-4xl">
+                <i class="fa fa-tachometer" aria-hidden="true"></i>
+            </div>
+            <p class="font-bold text-4xl p-4">Monitoreo POSY</p>
+        </div>
+        <div class="flex justify-evenly items-center">
+            <img src="{{ url_for('video_feed') }}" class="w-[1000px]">
+            <div class="w-80 flex flex-col justify-between items-start h-96">
+                <div class="mb-3">
+                    <div class="flex justify-start items-center gap-2 font-bold mb-3">
+                        <i class="fa fa-cubes" aria-hidden="true"></i>
+                        <h1 class="text-3xl">Contador de Cajas</h1>
+                    </div>
+                    <div class="flex flex-col gap-3">
+                        <p class="text-xl">CCPP: </p>
+                        <p class="text-xl">Cciesam: </p>
+                        <p class="text-xl">CCT: </p>
+                    </div>
+                </div>
+                <div class="w-full">
+                    <div class="flex justify-start items-center gap-2 font-bold mb-3">
+                        <i class="fa fa-sort" aria-hidden="true"></i>
+                        <h1 class="text-3xl">PWM de la Faja</h1>
+                    </div>
+                    <div class="w-full">
+                        <form action="">
+                            <input type="number" placeholder="360" class="p-2 w-full border-2 border-posyMain rounded-lg placeholder-posyMain placeholder-opacity-50">
+                        </form>
+                    </div>
+                </div>
+                <a href="/EMPEZAR" class="bg-posyMain text-white rounded-lg  p-3 w-full flex justify-center mt-3">
+                        EMPEZAR
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="bg-black fixed bottom-0 w-full p-3 flex justify-center items-center">
+        <p class="text-white">Feria y Concurso de Proyectos FIEE UNI ABET 2022-II</p>
+    </div>
+</body>
+</html>
